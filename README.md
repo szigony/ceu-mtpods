@@ -11,9 +11,7 @@ This analysis was created as the final assignment for *Mastering the Process of 
 
 ## Data Preparation
 
-The full code for data preparation can be found in the **[data-preparation.R](data-preparation.R)** file.
-
-___
+> The full code for data preparation can be found in the **[data-preparation.R](data-preparation.R)** file.
 
 The following packages were used to perform data wrangling: `dplyr`, `tibble`, `stringr` and `readxl`.
 
@@ -35,9 +33,7 @@ The following packages were used to perform data wrangling: `dplyr`, `tibble`, `
   
 ## Analysis
 
-The full code for the analysis can be found in the **[analysis.R](analysis.R)** file.
-
-___
+> The full code for the analysis can be found in the **[analysis.R](analysis.R)** file.
 
 The following packages were used to perform analysis: `corrr` and `ggplot2`.
 
@@ -55,7 +51,7 @@ res %>%
   filter(rowname == "total_liters_of_pure_alcohol")
 ```
 
-The correlation between life expectancy and total liters of pure alcohol consumed is very low, it seems like there's little to no correlaction between the two variables based on the available data.
+The correlation between life expectancy and total liters of pure alcohol consumed is very low (0.00839). It seems like there's little to no correlaction between the two variables based on the available data.
 
 ### Factors that are highly correlated to the expected lifetime
 
