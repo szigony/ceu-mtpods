@@ -92,3 +92,5 @@ We can draw some conclusions based on this chart:
   - `birthrate` is the total number of live births per 1000 in a year, and if this number is smaller, there are more deaths, which results in lower expected lifetime.
   - `infant_mortality_rate` is the death of young children under the age of 1, where the same principle applies as it did for `birthrate`.
 - One interesting thing to see is the `year` variable's negative correlation with life expectancy, which is alarming. This means that life expectancy was higher in earlier readings of the metric, while lately it has been in decline.
+
+*This documentation and the codes are also available in my [ceu-mtpods GitHub repository](https://github.com/szigony/ceu-mtpods).*
