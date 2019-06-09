@@ -15,8 +15,8 @@ drinks <- as.tibble(read.csv("data/Drinks.csv")) %>%
   mutate(beer_servings = na_if(beer_servings, "?"),
          wine_servings = na_if(wine_servings, "?"),
          spirit_servings = na_if(spirit_servings, "?")) %>% 
-  mutate_each(list(as.numeric), ends_with("servings")) %>% 
   mutate_if(is.factor, as.character) %>% 
+  mutate_each(as.numeric, ends_with("servings")) %>% 
   mutate(alcohol_per_beer_servings = beer_servings * 12 * 0.05,
          alcohol_per_wine_servings = wine_servings * 5 * 0.12,
          alcohol_per_spirit_servings = spirit_servings * 1.5 * 0.4,
@@ -43,7 +43,7 @@ lifetime <- as.tibble(read.csv("data/LifeExpectancy.csv")) %>%
   mutate(income_group = as.factor(na_if(str_replace(str_replace(income_group, "_income", ""), "_", " "), ""))) %>% 
   mutate_each(list(as.character), country) %>% 
   mutate(value = ifelse(metric == "Life expectancy at age 60 (years)", value + 60, value)) %>% 
-  group_by(country, year, sex, region, income_group) %>% 
+  group_by(country, year, region, income_group) %>% 
   summarise(avg_life_expectancy = mean(value)) %>% 
   ungroup()
 
